@@ -8,7 +8,7 @@
 //deleteAlternate and
 //merge
 
-public class AssessmentSLL_outline<E extends Comparable<E>> {
+public class AssessmentSLL<E extends Comparable<E>> {
 
 	// Each SLL object is the header of
 	// a singly-linked-list
@@ -18,7 +18,7 @@ public class AssessmentSLL_outline<E extends Comparable<E>> {
 	/**
 	 * constructor
 	 */
-	public AssessmentSLL_outline() {
+	public AssessmentSLL() {
 		// Construct an empty SLL.
 		first = null;
 	}
@@ -64,33 +64,40 @@ public class AssessmentSLL_outline<E extends Comparable<E>> {
 	 * add new node to end of list
 	 */
 	public void insertTail(E elem) {
-		// you to complete
+
+		Node<E> newNode = new Node<E>(elem, null);
+
+		if (first != null) {
+			Node<E> curr = first;
+			while (curr.next != null) {
+				curr = curr.next;
+			}
+			curr.next = newNode;
+		} else
+			first = newNode;
 	}
 
-	/** delete every alternate element
-	 *  imagine the elements are indexed 0, 1, 2, ... , n-1
-	 *  delete all the odd indexed elements
-	 *  so if list had values ant, badger, cat, dog
-	 *  the method would delete nodes containing badger and dog
+	/**
+	 * delete every alternate element imagine the elements are indexed 0, 1, 2, ...
+	 * , n-1 delete all the odd indexed elements so if list had values ant, badger,
+	 * cat, dog the method would delete nodes containing badger and dog
 	 */
 	public void deleteAlternate() {
-		//you to complete
+		// you to complete
 	}
 
 	/**
 	 * method to merge two ordered lists with this one whilst removing duplicates
-	 * order should be preserved
-	 * you need to replace the type list1, list2 and list3 and the return type
-	 * with the new name of this class
+	 * order should be preserved you need to replace the type list1, list2 and list3
+	 * and the return type with the new name of this class
 	 */
-	public  AssessmentSLL_outline<E> merge(AssessmentSLL_outline<E> list1, AssessmentSLL_outline<E> list2){
-		AssessmentSLL_outline<E> mergedList = new AssessmentSLL_outline<E>();
-		
+	public AssessmentSLL<E> merge(AssessmentSLL<E> list1, AssessmentSLL<E> list2) {
+		AssessmentSLL<E> mergedList = new AssessmentSLL<E>();
+
 		// you to fill in the rest
-		
+
 		return mergedList;
 
 	}
 
 }
-
