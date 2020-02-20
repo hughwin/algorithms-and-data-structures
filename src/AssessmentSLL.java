@@ -83,7 +83,21 @@ public class AssessmentSLL<E extends Comparable<E>> {
 	 * cat, dog the method would delete nodes containing badger and dog
 	 */
 	public void deleteAlternate() {
-		// you to complete
+
+		if (first == null) return;
+
+		Node currentNode = first;
+		Node nextNode = currentNode.next;
+
+		while (currentNode != null && nextNode != null){
+			currentNode.next = nextNode.next; // temporarily sets the current node to point at the node after the next node.
+			nextNode = null; // effectively removes the node
+			currentNode = currentNode.next; // current node is set to point at the node after the current node
+
+			if (currentNode != null){
+				nextNode = currentNode.next; // sets nextNode to the next node (if one exists).
+			}
+		}
 	}
 
 	/**

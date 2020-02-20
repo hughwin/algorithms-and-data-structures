@@ -112,7 +112,7 @@ public class AssEx1 {
      */
     public static void main(String[] args) {
         String fileName = args[0];
-        String[] originalArray = readFromFile(filename);
+        String[] originalArray = readFromFile(fileName);
         System.out.println("the array has length " + originalArray.length + "\n");
         String[] newArray1 = originalArray.clone();
         String[] newArray2 = originalArray.clone();
@@ -134,7 +134,12 @@ public class AssEx1 {
         System.out.print(setToString(arrayToSet(newArray2)) + "\n");
         
         AssessmentSLL<String> a = new  AssessmentSLL<String>();
-        a.insertTail("e");
+        a.insertTail("c");
+        a.insertTail("d");
+        a.insert("b");
+        a.insert("a");
+        a.printFirstToLast();
+        a.deleteAlternate();
         a.printFirstToLast();
         System.out.println();
 
