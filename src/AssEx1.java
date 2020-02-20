@@ -138,6 +138,12 @@ public class AssEx1 {
         a.insertTail("d");
         a.insert("b");
         a.insert("a");
+        AssessmentSLL<String> b = new  AssessmentSLL<String>();
+        b.insertTail("z");
+        b.insertTail("y");
+        b.insert("x");
+        b.insert("w");
+        a.merge(a, b);
         a.printFirstToLast();
         a.deleteAlternate();
         a.printFirstToLast();
