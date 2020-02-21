@@ -10,8 +10,7 @@
 
 import java.util.HashSet;
 
-public class AssessmentSLL<E extends Comparable<E>>
-{
+public class AssessmentSLL<E extends Comparable<E>> {
     // Each SLL object is the header of
     // a singly-linked-list
 
@@ -111,29 +110,83 @@ public class AssessmentSLL<E extends Comparable<E>>
         AssessmentSLL<E> mergedList = new AssessmentSLL<E>();
 
         HashSet hashSet = new HashSet<E>(); // Detects duplicates
-        Node headNode;
+        E headElement;
+        Node tempNode;
 
 
-        if (list1.first.element.compareTo(list2.first.element) > 0){
-            headNode = list1.first;
-            System.out.println(headNode.element);
+        while (list1 != null && list2 != null) {
+
+
+            if (list1.first == null) {
+                System.out.println("NulL!");
+                headElement = list2.first.element;
+                tempNode = list2.first.next;
+                list2.first = tempNode;
+
+                if (!hashSet.contains(headElement)) {
+                    mergedList.insertTail(headElement);
+                    mergedList.printFirstToLast();
+                }
+
+            }
+            if (list2.first == null) {
+                headElement = list1.first.element;
+                tempNode = list1.first.next;
+                list1.first = tempNode;
+
+                if (!hashSet.contains(headElement)) {
+                    mergedList.insertTail(headElement);
+                }
+            }
+
+            else {
+
+
+                if (list1.first.element.compareTo(list2.first.element) > 0) { // greater
+
+                    headElement = list2.first.element;
+                    tempNode = list2.first.next;
+                    list2.first = tempNode;
+
+                    if (hashSet.contains(headElement)) {
+                        break;
+                    } else {
+                        mergedList.insertTail(headElement);
+                    }
+
+                    System.out.println(headElement + "This one! ");
+                } else if (list1.first.element.compareTo(list2.first.element) < 0) { // lower
+                    headElement = list1.first.element;
+                    tempNode = list1.first.next;
+                    list1.first = tempNode;
+
+                    if (hashSet.contains(headElement)) {
+                        break;
+                    } else {
+                        mergedList.insertTail(headElement);
+                    }
+                    System.out.println(headElement + " Or this one! ");
+                } else if ((list1.first.element.compareTo(list2.first.element) == 0)) {
+
+                    headElement = list2.first.element;
+                    tempNode = list2.first.next;
+                    list2.first = tempNode;
+
+                    if (hashSet.contains(headElement)) {
+                        break;
+                    } else {
+                        mergedList.insertTail(headElement);
+                    }
+                }
+                mergedList.printFirstToLast();
+            }
+
+
+            // you to fill in the rest
+
+
         }
-        else if (list1.first.element.compareTo(list2.first.element) < 0){
-            headNode = list1.first;
-            System.out.println(headNode.element);
-        }
-        else if ((list1.first.element.compareTo(list2.first.element) == 0)){
-
-        }
-
         return mergedList;
-
-
-        // you to fill in the rest
-
-
     }
-
-
 
 }
