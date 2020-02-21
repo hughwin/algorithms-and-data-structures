@@ -109,25 +109,25 @@ public class AssessmentSLL<E extends Comparable<E>> {
     public AssessmentSLL<E> merge(AssessmentSLL<E> list1, AssessmentSLL<E> list2) {
         AssessmentSLL<E> mergedList = new AssessmentSLL<E>();
 
-        HashSet hashSet = new HashSet<E>(); // Detects duplicates
+        HashSet hashSet = new HashSet<E>(); // For detection of duplicates
         E headElement;
         Node tempNode;
+        Node tailNode = mergedList.first;
 
 
-        while (list1 != null && list2 != null) {
+        while (list1.first != null && list2.first != null) {
 
 
             if (list1.first == null) {
-                System.out.println("NulL!");
-                headElement = list2.first.element;
-                tempNode = list2.first.next;
-                list2.first = tempNode;
+                    headElement = list2.first.element;
+                    tempNode = list2.first.next;
+                    list2.first = tempNode;
 
-                if (!hashSet.contains(headElement)) {
-                    mergedList.insertTail(headElement);
-                    mergedList.printFirstToLast();
-                }
+                    if (!hashSet.contains(headElement)) {
+                        tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                        hashSet.add(headElement);
 
+                    }
             }
             if (list2.first == null) {
                 headElement = list1.first.element;
@@ -135,7 +135,10 @@ public class AssessmentSLL<E extends Comparable<E>> {
                 list1.first = tempNode;
 
                 if (!hashSet.contains(headElement)) {
-                    mergedList.insertTail(headElement);
+                    tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                    hashSet.add(headElement);
+
+
                 }
             }
 
@@ -148,45 +151,54 @@ public class AssessmentSLL<E extends Comparable<E>> {
                     tempNode = list2.first.next;
                     list2.first = tempNode;
 
-                    if (hashSet.contains(headElement)) {
-                        break;
-                    } else {
-                        mergedList.insertTail(headElement);
+                    if (!hashSet.contains(headElement)) {
+                        tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                        hashSet.add(headElement);
+
                     }
 
-                    System.out.println(headElement + "This one! ");
+
                 } else if (list1.first.element.compareTo(list2.first.element) < 0) { // lower
                     headElement = list1.first.element;
                     tempNode = list1.first.next;
                     list1.first = tempNode;
 
-                    if (hashSet.contains(headElement)) {
-                        break;
-                    } else {
-                        mergedList.insertTail(headElement);
+                    if (!hashSet.contains(headElement)) {
+                        tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                        hashSet.add(headElement);
+
                     }
-                    System.out.println(headElement + " Or this one! ");
+
                 } else if ((list1.first.element.compareTo(list2.first.element) == 0)) {
 
                     headElement = list2.first.element;
                     tempNode = list2.first.next;
                     list2.first = tempNode;
 
-                    if (hashSet.contains(headElement)) {
-                        break;
-                    } else {
-                        mergedList.insertTail(headElement);
+                    if (!hashSet.contains(headElement)) {
+                        tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                        hashSet.add(headElement);
+
                     }
                 }
-                mergedList.printFirstToLast();
             }
 
 
-            // you to fill in the rest
-
-
         }
+        mergedList.printFirstToLast();
         return mergedList;
+    }
+
+    public Node<E> insertTrackedTrail(Node tailNode, E elem){
+
+        Node newNode = new Node<E>(elem, null);
+        if(first == null){
+            first = newNode;
+        }
+        else {
+            tailNode.next = newNode;
+        }
+        return newNode;
     }
 
 }
