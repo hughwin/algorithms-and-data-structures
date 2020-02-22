@@ -114,8 +114,12 @@ public class AssessmentSLL<E extends Comparable<E>> {
         Node tempNode;
         Node tailNode = mergedList.first;
 
+        list2.printFirstToLast();
 
-        while (list1.first != null && list2.first != null) {
+
+        while (list1 != null && list2 != null) {
+           mergedList.printFirstToLast();
+           System.out.println();
 
 
             if (list1.first == null) {
@@ -124,10 +128,13 @@ public class AssessmentSLL<E extends Comparable<E>> {
                     list2.first = tempNode;
 
                     if (!hashSet.contains(headElement)) {
-                        tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                        mergedList.insertTail(headElement);
                         hashSet.add(headElement);
+                        mergedList.printFirstToLast();
+                        System.out.println();
 
                     }
+                    continue;
             }
             if (list2.first == null) {
                 headElement = list1.first.element;
@@ -135,11 +142,10 @@ public class AssessmentSLL<E extends Comparable<E>> {
                 list1.first = tempNode;
 
                 if (!hashSet.contains(headElement)) {
-                    tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                    mergedList.insertTail(headElement);
                     hashSet.add(headElement);
-
-
                 }
+                continue;
             }
 
             else {
@@ -152,7 +158,7 @@ public class AssessmentSLL<E extends Comparable<E>> {
                     list2.first = tempNode;
 
                     if (!hashSet.contains(headElement)) {
-                        tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                        mergedList.insertTail(headElement);
                         hashSet.add(headElement);
 
                     }
@@ -164,7 +170,7 @@ public class AssessmentSLL<E extends Comparable<E>> {
                     list1.first = tempNode;
 
                     if (!hashSet.contains(headElement)) {
-                        tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                        mergedList.insertTail(headElement);
                         hashSet.add(headElement);
 
                     }
@@ -176,7 +182,7 @@ public class AssessmentSLL<E extends Comparable<E>> {
                     list2.first = tempNode;
 
                     if (!hashSet.contains(headElement)) {
-                        tailNode = mergedList.insertTrackedTrail(tailNode, headElement);
+                        mergedList.insertTail(headElement);
                         hashSet.add(headElement);
 
                     }
@@ -185,7 +191,6 @@ public class AssessmentSLL<E extends Comparable<E>> {
 
 
         }
-        mergedList.printFirstToLast();
         return mergedList;
     }
 
