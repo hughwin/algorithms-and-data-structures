@@ -127,9 +127,13 @@ public class AssessmentSLL<E extends Comparable<E>> {
             nodeHeadList2 = nodeHeadList2.next;
         }
 
+        Node<E> headNode = first;
+
+
+
         Node<E> current = mergedList.first;
 
-    //    hashSet.add(mergedList.first.element);
+        hashSet.add(mergedList.first.element);
 
         while (nodeHeadList1 != null && nodeHeadList2 != null) {
 
@@ -148,7 +152,6 @@ public class AssessmentSLL<E extends Comparable<E>> {
             else if(nodeHeadList1.element == null){
 
                 if (!hashSet.contains(nodeHeadList2.element)) {
-                    System.out.println(nodeHeadList1.element + " " + nodeHeadList2.element);
                     hashSet.add(nodeHeadList2.element);
                     current.next = nodeHeadList2;
                 }
@@ -158,7 +161,8 @@ public class AssessmentSLL<E extends Comparable<E>> {
 
 
             else if (nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0) {
-                System.out.println(nodeHeadList1.element + " " + nodeHeadList2.element);
+
+
                 if (!hashSet.contains(nodeHeadList1.element)) {
                     hashSet.add(nodeHeadList1.element);
                     current.next = nodeHeadList1;
@@ -167,7 +171,6 @@ public class AssessmentSLL<E extends Comparable<E>> {
             }
 
             else if (nodeHeadList1.element.compareTo(nodeHeadList2.element) > 0) {
-              //  System.out.println(nodeHeadList1.element + " " + nodeHeadList2.element);
                 if (!hashSet.contains(nodeHeadList2.element)) {
                     hashSet.add(nodeHeadList2.element);
                     current.next = nodeHeadList2;
@@ -178,7 +181,6 @@ public class AssessmentSLL<E extends Comparable<E>> {
 
 
             else if (nodeHeadList1.element.compareTo(nodeHeadList2.element) == 0) {
-                System.out.println(nodeHeadList1.element + " " + nodeHeadList2.element);
                 if (!hashSet.contains(nodeHeadList2.element)) {
                     hashSet.add(nodeHeadList2.element);
                     current.next = nodeHeadList2;
@@ -191,19 +193,6 @@ public class AssessmentSLL<E extends Comparable<E>> {
             current = current.next;
         }
 
-//        while (nodeHeadList1 != null) {
-//            current.next = nodeHeadList1;
-//            current = current.next;
-//            current.next = null;
-//            nodeHeadList1 = nodeHeadList1.next;
-//        }
-//
-//        while (nodeHeadList2 != null) {
-//            current.next = nodeHeadList2;
-//            current = current.next;
-//            current.next = null;
-//            nodeHeadList2 = nodeHeadList2.next;
-//        }
 
         return mergedList;
     }
