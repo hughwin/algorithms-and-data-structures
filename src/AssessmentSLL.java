@@ -117,8 +117,6 @@ public class AssessmentSLL<E extends Comparable<E>> {
         Node<E> nodeHeadList1 = list1.first;
         Node<E> nodeHeadList2 = list2.first;
 
-        System.out.println(nodeHeadList1.element + " " + nodeHeadList2.element);
-
         if (nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0) { // nodeHeadList is greater
 
             mergedList.first = nodeHeadList1;
@@ -129,50 +127,58 @@ public class AssessmentSLL<E extends Comparable<E>> {
             nodeHeadList2 = nodeHeadList2.next;
         }
 
-        Node<E> headNode = first;
-
-
         Node<E> current = mergedList.first;
-
-
+        
         hashSet.add(mergedList.first.element);
 
         while (nodeHeadList1 != null && nodeHeadList2 != null) {
 
-            System.out.println(nodeHeadList1.element.compareTo(nodeHeadList2.element) > 0);
-            System.out.println(nodeHeadList1.element + " " + nodeHeadList2.element);
-            System.out.println(nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0);
 
 
-            if (nodeHeadList1.element.compareTo(nodeHeadList2.element) > 0){
-                System.out.println(nodeHeadList2.element.compareTo(nodeHeadList2.element) > 0);
-                if (!hashSet.contains(nodeHeadList2.element)){
-                    hashSet.add(nodeHeadList2.element);
-                    current.next = nodeHeadList2;
+
+                if (nodeHeadList1.element.compareTo(nodeHeadList2.element) > 0) {
+                    System.out.println(nodeHeadList2.element.compareTo(nodeHeadList2.element) > 0);
+                    if (!hashSet.contains(nodeHeadList2.element)) {
+                        hashSet.add(nodeHeadList2.element);
+                        current.next = nodeHeadList2;
+                    }
+                    nodeHeadList2 = nodeHeadList2.next;
+
+                } else if (nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0) {
+                    System.out.println(nodeHeadList1.element + " " + nodeHeadList2.element);
+                    if (!hashSet.contains(nodeHeadList1.element)) {
+                        hashSet.add(nodeHeadList1.element);
+                        current.next = nodeHeadList1;
+                    }
+                    nodeHeadList1 = nodeHeadList1.next;
+                } else {
+                    if (!hashSet.contains(nodeHeadList2.element)) {
+                        hashSet.add(nodeHeadList2.element);
+                        current.next = nodeHeadList2;
+                    }
+                    nodeHeadList2 = nodeHeadList2.next;
                 }
-                nodeHeadList2 = nodeHeadList2.next;
+            current = current.next;
             }
 
-            else if (nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0){
-            System.out.println(nodeHeadList1.element + " " + nodeHeadList2.element);
-            if (!hashSet.contains(nodeHeadList1.element)){
+        if (nodeHeadList1 == null) {
+            if (!hashSet.contains(nodeHeadList2.element)) {
+                hashSet.add(nodeHeadList2.element);
+                current.next = nodeHeadList2;
+            }
+            nodeHeadList2 = nodeHeadList2.next;
+
+
+
+        } else if (nodeHeadList2 == null) {
+
+            if (!hashSet.contains(nodeHeadList1.element)) {
                 hashSet.add(nodeHeadList1.element);
                 current.next = nodeHeadList1;
             }
-            nodeHeadList1 = nodeHeadList1.next;
+
         }
 
-             else {
-                 if (!hashSet.contains(nodeHeadList2.element)){
-                     hashSet.add(nodeHeadList2.element);
-                     current.next = nodeHeadList2;
-                 }
-                 nodeHeadList2 = nodeHeadList2.next;
-             }
-        current = current.next;
-
-
-    }
         mergedList.printFirstToLast();
         return mergedList;
     }
