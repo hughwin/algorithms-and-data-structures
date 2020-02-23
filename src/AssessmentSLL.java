@@ -128,49 +128,56 @@ public class AssessmentSLL<E extends Comparable<E>> {
         }
 
         Node<E> current = mergedList.first;
-        
+
         hashSet.add(mergedList.first.element);
 
         while (nodeHeadList1 != null && nodeHeadList2 != null) {
 
 
-
-
-                if (nodeHeadList1.element.compareTo(nodeHeadList2.element) > 0) {
-                    System.out.println(nodeHeadList2.element.compareTo(nodeHeadList2.element) > 0);
-                    if (!hashSet.contains(nodeHeadList2.element)) {
-                        hashSet.add(nodeHeadList2.element);
-                        current.next = nodeHeadList2;
-                    }
-                    nodeHeadList2 = nodeHeadList2.next;
-
-                } else if (nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0) {
-                    System.out.println(nodeHeadList1.element + " " + nodeHeadList2.element);
-                    if (!hashSet.contains(nodeHeadList1.element)) {
-                        hashSet.add(nodeHeadList1.element);
-                        current.next = nodeHeadList1;
-                    }
-                    nodeHeadList1 = nodeHeadList1.next;
-                } else {
-                    if (!hashSet.contains(nodeHeadList2.element)) {
-                        hashSet.add(nodeHeadList2.element);
-                        current.next = nodeHeadList2;
-                    }
-                    nodeHeadList2 = nodeHeadList2.next;
+            if (nodeHeadList1.element.compareTo(nodeHeadList2.element) > 0) {
+                if (!hashSet.contains(nodeHeadList2.element)) {
+                    hashSet.add(nodeHeadList2.element);
+                    current.next = nodeHeadList2;
                 }
-            current = current.next;
+                nodeHeadList2 = nodeHeadList2.next;
+
+            } else if (nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0) {
+                if (!hashSet.contains(nodeHeadList1.element)) {
+                    hashSet.add(nodeHeadList1.element);
+                    current.next = nodeHeadList1;
+                }
+                nodeHeadList1 = nodeHeadList1.next;
+            } else {
+                if (!hashSet.contains(nodeHeadList2.element)) {
+                    hashSet.add(nodeHeadList2.element);
+                    current.next = nodeHeadList2;
+                }
+                nodeHeadList2 = nodeHeadList2.next;
             }
+            current = current.next;
+        }
+
 
         if (nodeHeadList1 == null) {
+//
+//            while(nodeHeadList2.element.compareTo(current.element) == 0){
+//                System.out.println("Working2");
+
+//                nodeHeadList2 = nodeHeadList2.next;
+//            }
+
             if (!hashSet.contains(nodeHeadList2.element)) {
                 hashSet.add(nodeHeadList2.element);
                 current.next = nodeHeadList2;
             }
-            nodeHeadList2 = nodeHeadList2.next;
-
 
 
         } else if (nodeHeadList2 == null) {
+
+//            while(nodeHeadList1.element.compareTo(current.element) == 0){
+//                System.out.println("Working");
+//                nodeHeadList1 = nodeHeadList1.next;
+//            }
 
             if (!hashSet.contains(nodeHeadList1.element)) {
                 hashSet.add(nodeHeadList1.element);
@@ -182,7 +189,6 @@ public class AssessmentSLL<E extends Comparable<E>> {
         mergedList.printFirstToLast();
         return mergedList;
     }
-
 
 
 }
