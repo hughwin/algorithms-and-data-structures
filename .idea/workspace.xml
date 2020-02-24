@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="c9abbd3b-e7ec-4b1e-9679-3f20982844ce" name="Default Changelist" comment="Code tidied up. Still some problems">
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AssEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssEx1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AssessmentSLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssessmentSLL.java" afterDir="false" />
@@ -35,6 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AssEx1.java">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="287">
               <caret line="145" column="20" lean-forward="true" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
             </state>
@@ -48,6 +51,7 @@
               <caret line="590" selection-start-line="590" selection-end-line="590" />
               <folding>
                 <element signature="e#23577#23578#0" expanded="true" />
+
               </folding>
             </state>
           </provider>
@@ -56,6 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/HashSet.java">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="2839">
               <caret line="203" selection-start-line="203" selection-end-line="203" />
               <folding>
@@ -70,6 +75,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+
             </state>
           </provider>
         </entry>
@@ -94,7 +100,6 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
     <option name="x" value="960" />
     <option name="width" value="963" />
     <option name="height" value="1043" />
@@ -206,7 +211,6 @@
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
-  <component name="ToolWindowManager">
     <frame x="960" y="0" width="963" height="1043" extended-state="0" />
     <editor active="true" />
     <layout>

@@ -111,15 +111,18 @@ public class AssessmentSLL<E extends Comparable<E>> {
 
         HashSet<E> hashSet = new HashSet<>();
 
+
         if (list1 == null) return list2;
         if (list2 == null) return list1;
 
         Node<E> nodeHeadList1 = list1.first;
         Node<E> nodeHeadList2 = list2.first;
 
+
         Node<E> tempNode;
 
         if (nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0) { // nodeHeadList is greater
+
 
             mergedList.first = nodeHeadList1;
             nodeHeadList1 = nodeHeadList2.next;
@@ -134,6 +137,7 @@ public class AssessmentSLL<E extends Comparable<E>> {
         hashSet.add(mergedList.first.element);
 
         while (nodeHeadList1 != null && nodeHeadList2 != null) {
+
 
 
             if (nodeHeadList1.element.compareTo(nodeHeadList2.element) > 0) {
@@ -167,6 +171,7 @@ public class AssessmentSLL<E extends Comparable<E>> {
                 continue;
             }
 
+
         }
 
 
@@ -177,6 +182,7 @@ public class AssessmentSLL<E extends Comparable<E>> {
 
 //                nodeHeadList2 = nodeHeadList2.next;
 //            }
+
 
             if (!hashSet.contains(nodeHeadList2.element)) {
                 hashSet.add(nodeHeadList2.element);
