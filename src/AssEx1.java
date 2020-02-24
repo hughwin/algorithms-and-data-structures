@@ -133,6 +133,12 @@ public class AssEx1 {
 //        System.out.print("The corresponding set is:\n");
 //        System.out.print(setToString(arrayToSet(newArray2)) + "\n");
         
+
+        AssessmentSLL<Integer> a = new  AssessmentSLL<Integer>();
+        a.insert(5);
+        a.insert(4);
+        a.insert(3);
+        a.insert(2);
         AssessmentSLL<String> a = new  AssessmentSLL<String>();
         a.insertTail("c");
         a.insertTail("d");
@@ -150,6 +156,18 @@ public class AssEx1 {
         a.printFirstToLast();
         System.out.println();
 
+
+        AssessmentSLL<Integer> b = new  AssessmentSLL<Integer>();
+
+        b.insert(9);
+        b.insert(4);
+        b.insert(3);
+        b.insert(2);
+
+
+
+        AssessmentSLL<Integer> c = new  AssessmentSLL<Integer>().merge(b, a);
+        c.printFirstToLast();
 
     }
 
