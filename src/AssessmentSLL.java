@@ -140,7 +140,7 @@ public class AssessmentSLL<E extends Comparable<E>> {
 
 
 			if (nodeHeadList1.element.compareTo(nodeHeadList2.element) > 0) {
-				Node<E> tempNode = new Node<E>(nodeHeadList2.element, nodeHeadList2.next);
+				Node<E> tempNode = new Node<>(nodeHeadList2.element, nodeHeadList2.next);
 				if (!hashSet.contains(nodeHeadList2.element)) {
 					nodeHeadList2.next = null;
 					hashSet.add(nodeHeadList2.element);
@@ -148,10 +148,9 @@ public class AssessmentSLL<E extends Comparable<E>> {
 					current = current.next;
 				}
 				nodeHeadList2 = tempNode.next;
-				continue;
 			}
 			else {
-				Node<E> tempNode = new Node<E>(nodeHeadList1.element, nodeHeadList1.next);
+				Node<E> tempNode = new Node<>(nodeHeadList1.element, nodeHeadList1.next);
 				if (!hashSet.contains(nodeHeadList1.element)) {
 					hashSet.add(nodeHeadList1.element);
 					nodeHeadList1.next = null;
@@ -160,7 +159,6 @@ public class AssessmentSLL<E extends Comparable<E>> {
 				}
 
 				nodeHeadList1 = tempNode.next;
-				continue;
 
 			}
 
@@ -168,34 +166,26 @@ public class AssessmentSLL<E extends Comparable<E>> {
 		}
 
 
-		if (nodeHeadList1 == null) {
-//
-//            while(nodeHeadList2.element.compareTo(current.element) == 0){
-//                System.out.println("Working2");
-
-//                nodeHeadList2 = nodeHeadList2.next;
-//            }
-
-
-			if (!hashSet.contains(nodeHeadList2.element)) {
-				hashSet.add(nodeHeadList2.element);
+			while (nodeHeadList2 != null) {
+				Node<E> tempNode = new Node<>(nodeHeadList2.element, nodeHeadList2.next);
+				if(hashSet.contains(nodeHeadList2.element)){
+					nodeHeadList2 = null;
+				}
 				current.next = nodeHeadList2;
+				nodeHeadList2 = tempNode.next;
 			}
 
 
-		} else if (nodeHeadList2 == null) {
-
-//            while(nodeHeadList1.element.compareTo(current.element) == 0){
-//                System.out.println("Working");
-//                nodeHeadList1 = nodeHeadList1.next;
-//            }
-
-			if (!hashSet.contains(nodeHeadList1.element)) {
-				hashSet.add(nodeHeadList1.element);
+			while (nodeHeadList1 != null) {
+				Node<E> tempNode = new Node<>(nodeHeadList1.element, nodeHeadList1.next);
+				if(hashSet.contains(nodeHeadList1.element)){
+					nodeHeadList1 = null;
+				}
 				current.next = nodeHeadList1;
+				nodeHeadList1 = tempNode.next;
 			}
 
-		}
+
 		return mergedList;
 	}
 

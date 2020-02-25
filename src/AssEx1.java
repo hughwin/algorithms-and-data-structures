@@ -3,8 +3,14 @@
 
 //add any import statements you need here
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeSet;
 
 
 public class AssEx1 {
@@ -23,7 +29,7 @@ public class AssEx1 {
         try {
             FileReader fr = new FileReader(new File(fileName));
             BufferedReader br = new BufferedReader(fr);
-            String line = br.readLine();
+            String line;
 
 
             // Loops until an empty line is encountered.
@@ -45,7 +51,7 @@ public class AssEx1 {
      */
     public static Set<String> arrayToSet(String[] myArray) {
 
-        TreeSet<String> treeSet = new TreeSet<String>();
+        TreeSet<String> treeSet = new TreeSet<>();
 
         for (String s : myArray) {
             treeSet.add(s);
@@ -111,40 +117,40 @@ public class AssEx1 {
      * @param args
      */
     public static void main(String[] args) {
-//        String fileName = args[0];
-//        String[] originalArray = readFromFile(fileName);
-//        System.out.println("the array has length " + originalArray.length + "\n");
-//        String[] newArray1 = originalArray.clone();
-//        String[] newArray2 = originalArray.clone();
-//
-//        jumbleArray(newArray1);
-//        jumbleArray(newArray2);
-//
-//        System.out.print("The original array is:\n");
-//        System.out.print(arrayToString(originalArray) + "\n");
-//
-//        System.out.print("The frst jumbled array is:\n");
-//        System.out.print(arrayToString(newArray1) + "\n");
-//        System.out.print("The corresponding set is:\n");
-//        System.out.print(setToString(arrayToSet(newArray1)) + "\n");
-//
-//        System.out.print("The second jumbled array is:\n");
-//        System.out.print(arrayToString(newArray2) + "\n");
-//        System.out.print("The corresponding set is:\n");
-//        System.out.print(setToString(arrayToSet(newArray2)) + "\n");
+        String fileName = args[0];
+        String[] originalArray = readFromFile(fileName);
+        System.out.println("the array has length " + originalArray.length + "\n");
+        String[] newArray1 = originalArray.clone();
+        String[] newArray2 = originalArray.clone();
+
+        jumbleArray(newArray1);
+        jumbleArray(newArray2);
+
+        System.out.print("The original array is:\n");
+        System.out.print(arrayToString(originalArray) + "\n");
+
+        System.out.print("The frst jumbled array is:\n");
+        System.out.print(arrayToString(newArray1) + "\n");
+        System.out.print("The corresponding set is:\n");
+        System.out.print(setToString(arrayToSet(newArray1)) + "\n");
+
+        System.out.print("The second jumbled array is:\n");
+        System.out.print(arrayToString(newArray2) + "\n");
+        System.out.print("The corresponding set is:\n");
+        System.out.print(setToString(arrayToSet(newArray2)) + "\n");
 
 
 
         AssessmentSLL<String> a = new  AssessmentSLL<String>();
-        a.insertTail("t");
-        a.insertTail("s");
-        a.insert("r");
-        a.insert("q");
+        a.insertTail("e");
+        a.insertTail("e");
+        a.insert("e");
+        a.insert("e");
         AssessmentSLL<String> b = new  AssessmentSLL<String>();
-        b.insert("d");
-        b.insert("c");
-        b.insert("b");
-        b.insert("a");
+        b.insert("e");
+        b.insert("e");
+        b.insert("e");
+        b.insert("e");
         AssessmentSLL<String> c = new  AssessmentSLL<String>().merge(a, b);
         c.printFirstToLast();
 
