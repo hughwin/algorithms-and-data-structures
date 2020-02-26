@@ -66,16 +66,16 @@ public class AssessmentSLL<E extends Comparable<E>> {
 	 */
 	public void insertTail(E elem) {
 
-		Node<E> newNode = new Node<E>(elem, null);
+		Node<E> newNode = new Node<E>(elem, null); // Create a new node containing the element passed in the argument.
 
-		if (first != null) {
-			Node<E> curr = first;
-			while (curr.next != null) {
-				curr = curr.next;
+		if (first != null) { // If the head of the existing list is not equal to null
+			Node<E> curr = first; // set node curr to equal the head of the list
+			while (curr.next != null) { // while the curr node's next doesn't point to null
+				curr = curr.next; // set the curr pointer to point at the next node in the list
 			}
-			curr.next = newNode;
+			curr.next = newNode; // once loop breaks, set curr's next to point to newNode
 		} else
-			first = newNode;
+			first = newNode; // list is empty, head of the list is newNode.
 	}
 
 	/**
@@ -85,10 +85,10 @@ public class AssessmentSLL<E extends Comparable<E>> {
 	 */
 	public void deleteAlternate() {
 
-		if (first == null) return;
+		if (first == null) return; // returns if the list is null
 
-		Node currentNode = first;
-		Node nextNode = currentNode.next;
+		Node currentNode = first; // head of the list
+		Node nextNode = currentNode.next; // next node in the list after the head
 
 		while (currentNode != null && nextNode != null) {
 			currentNode.next = nextNode.next; // temporarily sets the current node to point at the node after the next node.
@@ -109,45 +109,45 @@ public class AssessmentSLL<E extends Comparable<E>> {
 	public AssessmentSLL<E> merge(AssessmentSLL<E> list1, AssessmentSLL<E> list2) {
 		AssessmentSLL<E> mergedList = new AssessmentSLL<E>();
 
-		HashSet<E> hashSet = new HashSet<>();
+		HashSet<E> hashSet = new HashSet<>(); // HashSet to contain already added numbers. To be used for comparisons.
 
+		/* If either list is null return */
 
 		if (list1 == null) return list2;
 		if (list2 == null) return list1;
 
-		Node<E> nodeHeadList1 = list1.first;
-		Node<E> nodeHeadList2 = list2.first;
+		Node<E> nodeHeadList1 = list1.first; // set nodeHeadList1 to point to the head of list1
+		Node<E> nodeHeadList2 = list2.first; // set nodeHeadList2 to point to the head of list2
 
 
-		if (nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0) { // nodeHeadList is greater
+		if (nodeHeadList1.element.compareTo(nodeHeadList2.element) < 0) { // if nodeHeadList1 is less than nodeHeadList2
 
+			mergedList.first = nodeHeadList1; // set the head of the mergedList to be nodeHead1
+			nodeHeadList1 = nodeHeadList1.next; // moves the pointer to the next node
 
-			mergedList.first = nodeHeadList1;
-			nodeHeadList1 = nodeHeadList1.next;
-		} else {
+		} else { // do the opposite of above
 
 			mergedList.first = nodeHeadList2;
 			nodeHeadList2 = nodeHeadList2.next;
+
 		}
 
 		Node<E> current = mergedList.first;
 
-		hashSet.add(mergedList.first.element);
+		hashSet.add(mergedList.first.element); // add the node to the HashSet to detect duplicates
 
 		while (nodeHeadList1 != null && nodeHeadList2 != null) {
 
 
-
-
 			if (nodeHeadList1.element.compareTo(nodeHeadList2.element) > 0) {
-				Node<E> tempNode = new Node<>(nodeHeadList2.element, nodeHeadList2.next);
-				if (!hashSet.contains(nodeHeadList2.element)) {
-					nodeHeadList2.next = null;
-					hashSet.add(nodeHeadList2.element);
-					current.next = nodeHeadList2;
-					current = current.next;
+				Node<E> tempNode = new Node<>(nodeHeadList2.element, nodeHeadList2.next); // new Temp node to contain current head of list
+				if (!hashSet.contains(nodeHeadList2.element)) { // if the HashSet doesn't currently contain the value then...
+					nodeHeadList2.next = null;  // set the node's next to null
+					hashSet.add(nodeHeadList2.element); // add the element to the HashSet
+					current.next = nodeHeadList2; // add the node to the end of merged list
+					current = current.next; // move the merged list pointer to the end of the list
 				}
-				nodeHeadList2 = tempNode.next;
+				nodeHeadList2 = tempNode.next; // move the pointer of nodeHeadList to the next node
 			}
 			else {
 				Node<E> tempNode = new Node<>(nodeHeadList1.element, nodeHeadList1.next);
