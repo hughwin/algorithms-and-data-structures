@@ -151,7 +151,12 @@ public class AssEx1 {
         b.insert("e");
         b.insert("e");
         b.insert("e");
-        AssessmentSLL<String> c = new  AssessmentSLL<String>().merge(a, b);
+        AssessmentSLL<String> c = new  AssessmentSLL<String>();
+        c.insert("d");
+        c.insert("c");
+        c.insert("b");
+        c.insert("a");
+        c.merge(a,b);
         c.printFirstToLast();
 
     }
