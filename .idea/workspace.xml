@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="244befc7-f1ce-4307-839a-e4dda1883b4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assessment/AssEx1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assessment/AssEx1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assessment/AssessmentSLL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assessment/AssessmentSLL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AssEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssEx1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssessmentSLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssessmentSLL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,11 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hughw\IdeaProjects\algorithms-and-data-structures\src" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="AssEx1" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -65,7 +71,8 @@
       <workItem from="1583183243749" duration="10000" />
       <workItem from="1583244761965" duration="2122000" />
       <workItem from="1583335279956" duration="348000" />
-      <workItem from="1583341798899" duration="2600000" />
+      <workItem from="1583341798899" duration="3850000" />
+      <workItem from="1583931020317" duration="1621000" />
     </task>
     <task id="LOCAL-00001" summary="Final version of the algorithm.">
       <created>1582668132252</created>
@@ -74,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582668132252</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lazy fix to do three lists.">
+      <created>1583414477107</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583414477107</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,7 +97,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Final version of the algorithm" />
     <MESSAGE value="Final version of the algorithm." />
-    <option name="LAST_COMMIT_MESSAGE" value="Final version of the algorithm." />
+    <MESSAGE value="Lazy fix to do three lists." />
+    <option name="LAST_COMMIT_MESSAGE" value="Lazy fix to do three lists." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -91,110 +106,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="487" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1583335313745" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1583414000972">
+    <state x="358" y="7" key="CommitChangelistDialog2" timestamp="1583414475953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583414000972" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1583414000971">
+    <state x="358" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583414475953" />
+    <state width="723" height="194" key="GridCell.Tab.0.bottom" timestamp="1583932776623">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583414000971" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1583414000970">
+    <state width="723" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
+    <state width="723" height="194" key="GridCell.Tab.0.center" timestamp="1583932776623">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583414000970" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1583414000971">
+    <state width="723" height="194" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
+    <state width="723" height="194" key="GridCell.Tab.0.left" timestamp="1583932776623">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583414000971" />
+    <state width="723" height="194" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
+    <state width="723" height="194" key="GridCell.Tab.0.right" timestamp="1583932776623">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="723" height="194" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
     <state x="237" y="0" key="SettingsEditor" timestamp="1583335315606">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="237" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583335315606" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1583414487481">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583414487481" />
     <state x="453" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1583335279678">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="453" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583335279678" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>172</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>173</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>174</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>175</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>176</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>177</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>178</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>179</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>180</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>184</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>182</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>185</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>186</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>187</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AssessmentSLL.java</url>
-          <line>189</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

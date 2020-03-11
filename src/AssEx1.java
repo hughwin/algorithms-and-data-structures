@@ -152,9 +152,9 @@ public class AssEx1 {
         b.insert("e");
         b.insert("e");
         AssessmentSLL<String> c = new  AssessmentSLL<String>();
-        c.insert("d");
-        c.insert("c");
-        c.insert("b");
+        c.insert("e");
+        c.insert("e");
+        c.insert("e");
         c.insert("a");
         c.merge(a,b);
         c.printFirstToLast();
