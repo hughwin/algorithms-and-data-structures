@@ -1,3 +1,7 @@
+import org.junit.Test;
+
+import static org.junit.Assert.assertArrayEquals;
+
 public class algorithms {
 
     public static void main(String[] args) {
@@ -15,6 +19,7 @@ public class algorithms {
         for(int i : sortedArray){
             System.out.println(i);
         }
+
 
     }
 
@@ -58,13 +63,66 @@ public class algorithms {
 
             for (int j = i; j < unsortedArray.length; j++) {
                 if (unsortedArray[j] < index) {
-                    int indexTemp = unsortedArray[i];
+                    int temp = unsortedArray[i];
                     unsortedArray[i] = unsortedArray[j];
-                    unsortedArray[j] = indexTemp;
+                    unsortedArray[j] = temp;
                 }
             }
         }
         return unsortedArray;
+    }
+
+    public static void mergeSort(int[] array){
+
+        if (array.length < 2){
+            return;
+        }
+
+        int mid = array.length / 2;
+        int[] leftArray = new int[mid];
+        int[] rightArray = new int[array.length - mid];
+
+        for (int i = 0 ; i < array.length; i++){
+            if (i < mid){
+                leftArray[i] = array[i];
+            }
+            else{rightArray[i - mid] = array[i];}
+        }
+
+
+        mergeSort(leftArray);
+        mergeSort(rightArray);
+
+        merge(array, leftArray, rightArray, mid, array.length - mid);
+    }
+
+    public static void merge(
+            int[] array, int[] leftArray, int[] rightArray, int left, int right) {
+
+        int i = 0, j = 0, k = 0;
+        while (i < left && j < right) {
+            if (leftArray[i] <= rightArray[j]) {
+                array[k++] = leftArray[i++];
+            }
+            else {
+                array[k++] = rightArray[j++];
+            }
+        }
+        while (i < left) {
+            array[k++] = leftArray[i++];
+        }
+        while (j < right) {
+            array[k++] = rightArray[j++];
+        }
+    }
+
+    @Test
+    public void positiveTest() {
+        int[] actual = { 5, 1, 6, 2, 3, 4 };
+        int[] expected = { 1, 2, 3, 4, 5, 6 };
+        System.out.println(actual);
+        mergeSort(actual);
+        assertArrayEquals(expected, actual);
     }
 
 }
