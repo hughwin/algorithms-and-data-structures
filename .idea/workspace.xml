@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="244befc7-f1ce-4307-839a-e4dda1883b4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/algorithms/algorithms.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/src/algorithms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assessment/assessment.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assessment/src/birds.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assessment/AssEx1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assessment/AssEx1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assessment/AssessmentSLL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assessment/AssessmentSLL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssEx1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assessment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assessment.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/birds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/birds.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assessment/AssEx1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assessment/AssessmentSLL$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assessment/AssessmentSLL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assessment/birds.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AssEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/src/AssEx1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AssessmentSLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/src/AssessmentSLL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/birds.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exampleOutput.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/assessment/src/exampleOutput.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +28,13 @@
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,20 +46,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hugh\IdeaProjects\algorithms-and-data-structures\assessment" />
+      <recent name="C:\Users\Hugh\IdeaProjects\algorithms-and-data-structures\src" />
       <recent name="C:\Users\hughw\IdeaProjects\algorithms-and-data-structures\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.algorithms">
     <configuration name="AssEx1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AssEx1" />
       <module name="Assessment" />
@@ -55,6 +79,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="algorithms" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="algorithms" />
+      <module name="algorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.AssEx1" />
+      <item itemvalue="Application.algorithms" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -73,6 +108,12 @@
       <workItem from="1583335279956" duration="348000" />
       <workItem from="1583341798899" duration="3850000" />
       <workItem from="1583931020317" duration="1621000" />
+      <workItem from="1584358930610" duration="423000" />
+      <workItem from="1584462084766" duration="132000" />
+      <workItem from="1586208819768" duration="1362000" />
+      <workItem from="1586256101015" duration="1002000" />
+      <workItem from="1586512965534" duration="46000" />
+      <workItem from="1587032378210" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="Final version of the algorithm.">
       <created>1582668132252</created>
@@ -102,30 +143,52 @@
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="487" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1583335313745">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1036" y="182" key="#Project_Structure" timestamp="1587032652127">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1036" y="182" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1587032652127" />
+    <state x="89" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587032947728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="89" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587032947728" />
+    <state x="609" y="247" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587032945938">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="487" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1583335313745" />
-    <state x="358" y="7" key="CommitChangelistDialog2" timestamp="1583414475953">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="609" y="247" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587032945938" />
+    <state x="1088" y="455" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584358980042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1088" y="455" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584358980042" />
+    <state x="448" y="9" key="CommitChangelistDialog2" timestamp="1587033034016">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="358" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583414475953" />
-    <state width="723" height="194" key="GridCell.Tab.0.bottom" timestamp="1583932776623">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="448" y="9" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587033034016" />
+    <state x="266" y="265" key="FileChooserDialogImpl" timestamp="1586512999758">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="266" y="265" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586512999758" />
+    <state width="916" height="280" key="GridCell.Tab.0.bottom" timestamp="1587033034033">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="723" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
-    <state width="723" height="194" key="GridCell.Tab.0.center" timestamp="1583932776623">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587033034033" />
+    <state width="916" height="280" key="GridCell.Tab.0.center" timestamp="1587033034032">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="723" height="194" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
-    <state width="723" height="194" key="GridCell.Tab.0.left" timestamp="1583932776623">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587033034032" />
+    <state width="916" height="280" key="GridCell.Tab.0.left" timestamp="1587033034032">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="723" height="194" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
-    <state width="723" height="194" key="GridCell.Tab.0.right" timestamp="1583932776623">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587033034032" />
+    <state width="916" height="280" key="GridCell.Tab.0.right" timestamp="1587033034032">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="723" height="194" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
+    <state width="916" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587033034032" />
     <state x="237" y="0" key="SettingsEditor" timestamp="1583335315606">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -134,9 +197,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583414487481" />
-    <state x="453" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1583335279678">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="566" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1586512965571">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="453" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583335279678" />
+    <state x="566" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586512965571" />
+    <state x="217" y="305" key="extract.method.dialog" timestamp="1586256517546">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="217" y="305" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586256517546" />
+    <state x="779" y="145" key="new project wizard" timestamp="1587032617731">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="779" y="145" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1587032617731" />
   </component>
 </project>
