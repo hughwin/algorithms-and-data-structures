@@ -3,11 +3,18 @@ public class algorithms {
     public static void main(String[] args) {
 
         int[] testArray = new int[]{1, 2, 3, 4, 5, 6};
+        int[] unsortedArray = new int[]{3,2,7,8,1};
 
         System.out.println(linearSearch(testArray, 5));
         System.out.println(linearSearch(testArray, 6));
 
         System.out.println(binarySearch(testArray, 6, 0, testArray.length));
+
+        int[] sortedArray = selectionSort(unsortedArray);
+        System.out.println("");
+        for(int i : sortedArray){
+            System.out.println(i);
+        }
 
     }
 
@@ -36,11 +43,28 @@ public class algorithms {
 
             if (array[mid] > searchTerm) {
                 return binarySearch(array, searchTerm, leftIndex, mid - 1);
-            }
-            else {
+            } else {
                 return binarySearch(array, searchTerm, mid + 1, rightIndex);
             }
         }
         return -1;
     }
+
+    public static int[] selectionSort(int[] unsortedArray) {
+
+        for (int i = 0; i < unsortedArray.length; i++) {
+
+            int index = unsortedArray[i];
+
+            for (int j = i; j < unsortedArray.length; j++) {
+                if (unsortedArray[j] < index) {
+                    int indexTemp = unsortedArray[i];
+                    unsortedArray[i] = unsortedArray[j];
+                    unsortedArray[j] = indexTemp;
+                }
+            }
+        }
+        return unsortedArray;
+    }
+
 }
