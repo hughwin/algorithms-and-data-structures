@@ -20,6 +20,8 @@ public class algorithms {
             System.out.println(i);
         }
 
+        quickSort(unsortedArray, 0, 4);
+
 
     }
 
@@ -35,7 +37,7 @@ public class algorithms {
 
     public static int binarySearch(int[] array, int searchTerm,
                                    int leftIndex, int rightIndex) {
-
+        // Big O complexity : log n
         if (rightIndex >= 1) {
             int mid = leftIndex + (rightIndex - 1)  / 2;
 
@@ -74,23 +76,23 @@ public class algorithms {
 
     public static void mergeSort(int[] array){
 
-        if (array.length < 2){
-            return;
+        if (array.length < 2){ // if length is less than 2
+            return;  // return array
         }
 
-        int mid = array.length / 2;
+        int mid = array.length / 2; // divide array in 2 by midpoint
         int[] leftArray = new int[mid];
         int[] rightArray = new int[array.length - mid];
 
         for (int i = 0 ; i < array.length; i++){
-            if (i < mid){
+            if (i < mid){ // if number is less than midpoint, put into left array
                 leftArray[i] = array[i];
             }
-            else{rightArray[i - mid] = array[i];}
+            else{rightArray[i - mid] = array[i];} // else put the number in the right array
         }
 
 
-        mergeSort(leftArray);
+        mergeSort(leftArray); // recursively call mergesort
         mergeSort(rightArray);
 
         merge(array, leftArray, rightArray, mid, array.length - mid);
@@ -102,13 +104,13 @@ public class algorithms {
         int i = 0, j = 0, k = 0;
         while (i < left && j < right) {
             if (leftArray[i] <= rightArray[j]) {
-                array[k++] = leftArray[i++];
+                array[k++] = leftArray[i++]; // sort the array
             }
             else {
                 array[k++] = rightArray[j++];
             }
         }
-        while (i < left) {
+        while (i < left) { // put the numbers in the right place
             array[k++] = leftArray[i++];
         }
         while (j < right) {
@@ -122,6 +124,44 @@ public class algorithms {
         int[] expected = { 1, 2, 3, 4, 5, 6 };
         System.out.println(actual);
         mergeSort(actual);
+        assertArrayEquals(expected, actual);
+    }
+
+    public static void quickSort(int arr[], int begin, int end){
+        if (begin < end){ // if starting index is greater than end index
+            int partitionIndex = partition(arr, begin, end); // partition index is the index on the end
+
+            quickSort(arr, begin, partitionIndex-1); // calls every other index until the two indexes meet
+            quickSort(arr, partitionIndex+1, end);
+        }
+    }
+
+    static int partition(int arr[], int begin, int end){
+        int pivot = arr[end]; // pivot is chosen as the value at the end
+        int i = (begin-1); // make i one less than being
+
+
+        for (int j = begin ; j < end ; j++){
+            if (arr[j] <= pivot){
+                i++; // increment i
+
+                int swapTemp = arr[i]; // store the temp int as swapTemp
+                arr[i] = arr[j]; // swap the values of i and j
+                arr[j] = swapTemp;
+            }
+        }
+        int swapTemp = arr[i+1]; // swap the pivot with the current pointer of i
+        arr[i+1] = arr[end];
+        arr[end] = swapTemp;
+
+        return i+1;
+    }
+
+    @Test
+    public  void quickSortTest() {
+        int[] actual = { 5, 1, 6, 2, 3, 4 };
+        int[] expected = { 1, 2, 3, 4, 5, 6 };
+        quickSort(actual, 0, actual.length-1);
         assertArrayEquals(expected, actual);
     }
 
