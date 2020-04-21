@@ -43,16 +43,36 @@ public class BinarySearchTrees <E>{
         }
     }
 
-    public void printTreeRoot(){
-        printTreeHelper(head);
+    public void printTreeRoot() {
+        printTreePostOrder(head);
+        System.out.println();
+        printTreeInOrder(head);
+        System.out.println();
+        printTreePreOrder(head);
     }
 
-    private void printTreeHelper(Node node) {
-        if(node !=  null) {
-            printTreeHelper(node.leftNode);
-            printTreeHelper(node.rightNode);
-            //Visit the node by Printing the node data
-            System.out.printf("%d ",node.value);
+    private void printTreeInOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        printTreeInOrder(node.leftNode);
+        System.out.printf("%s ", node.value);
+        printTreeInOrder(node.rightNode);
+    }
+
+    private void printTreePostOrder(Node node) {
+        if (node != null) {
+            printTreePostOrder(node.leftNode);
+            printTreePostOrder(node.rightNode);
+            System.out.printf("%d ", node.value);
+        }
+    }
+
+    private void printTreePreOrder(Node node) {
+        if (node != null) {
+            printTreePreOrder(node.rightNode);
+            printTreePreOrder(node.leftNode);
+            System.out.printf("%d ", node.value);
         }
     }
 
