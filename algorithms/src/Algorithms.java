@@ -2,7 +2,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
-public class algorithms {
+public class Algorithms {
 
     public static void main(String[] args) {
 
@@ -21,6 +21,13 @@ public class algorithms {
         }
 
         quickSort(unsortedArray, 0, 4);
+
+        BinarySearchTrees bst = new BinarySearchTrees();
+        bst.insert(5);
+        bst.insert(2);
+        bst.insert(7);
+
+        bst.printTreeRoot();
 
 
     }
@@ -99,6 +106,9 @@ public class algorithms {
     }
 
     public static void merge(
+
+            // Big O complexity : n log n
+
             int[] array, int[] leftArray, int[] rightArray, int left, int right) {
 
         int i = 0, j = 0, k = 0;
@@ -128,6 +138,9 @@ public class algorithms {
     }
 
     public static void quickSort(int arr[], int begin, int end){
+
+        // Big O complexity : n log n
+
         if (begin < end){ // if starting index is greater than end index
             int partitionIndex = partition(arr, begin, end); // partition index is the index on the end
 
@@ -138,7 +151,7 @@ public class algorithms {
 
     static int partition(int arr[], int begin, int end){
         int pivot = arr[end]; // pivot is chosen as the value at the end
-        int i = (begin-1); // make i one less than being
+        int i = (begin-1); // make i one less than beginning
 
 
         for (int j = begin ; j < end ; j++){

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="244befc7-f1ce-4307-839a-e4dda1883b4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/src/BinarySearchTrees.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/src/algorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/src/algorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/src/algorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/src/Algorithms.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,26 +70,26 @@
       </method>
     </configuration>
     <configuration name="algorithms" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="algorithms" />
+      <option name="MAIN_CLASS_NAME" value="Algorithms" />
       <module name="algorithms" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algorithms.positiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Algorithms.positiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="algorithms" />
+      <option name="MAIN_CLASS_NAME" value="Algorithms" />
       <option name="METHOD_NAME" value="positiveTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algorithms.quickSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Algorithms.quickSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="algorithms" />
+      <option name="MAIN_CLASS_NAME" value="Algorithms" />
       <option name="METHOD_NAME" value="quickSortTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -97,13 +99,13 @@
     <list>
       <item itemvalue="Application.AssEx1" />
       <item itemvalue="Application.algorithms" />
-      <item itemvalue="JUnit.algorithms.positiveTest" />
-      <item itemvalue="JUnit.algorithms.quickSortTest" />
+      <item itemvalue="JUnit.Algorithms.positiveTest" />
+      <item itemvalue="JUnit.Algorithms.quickSortTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.algorithms.quickSortTest" />
-        <item itemvalue="JUnit.algorithms.positiveTest" />
+        <item itemvalue="JUnit.Algorithms.quickSortTest" />
+        <item itemvalue="JUnit.Algorithms.positiveTest" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +134,10 @@
       <workItem from="1587032378210" duration="11708000" />
       <workItem from="1587119247904" duration="144000" />
       <workItem from="1587119885116" duration="56000" />
-      <workItem from="1587119978563" duration="2499000" />
+      <workItem from="1587119978563" duration="4247000" />
+      <workItem from="1587215818477" duration="594000" />
+      <workItem from="1587308873171" duration="89000" />
+      <workItem from="1587468356788" duration="5681000" />
     </task>
     <task id="LOCAL-00001" summary="Final version of the algorithm.">
       <created>1582668132252</created>
@@ -176,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587047102690</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implemented quickSort algorithm (and test)">
+      <created>1587122523827</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587122523827</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +202,8 @@
     <MESSAGE value="Implemented binary search algorithm" />
     <MESSAGE value="Implemented selectionSort algorithm" />
     <MESSAGE value="Implemented mergeSort algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented mergeSort algorithm" />
+    <MESSAGE value="Implemented quickSort algorithm (and test)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented quickSort algorithm (and test)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -206,6 +219,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1056" y="96" width="768" height="848" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587042898276" />
+    <state x="897" y="197" key="#com.intellij.ide.util.MemberChooser" timestamp="1587475380777">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="897" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587475380777" />
     <state x="609" y="247" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587032945938">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -215,35 +232,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1088" y="455" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584358980042" />
-    <state x="448" y="9" key="CommitChangelistDialog2" timestamp="1587047101446">
+    <state x="448" y="9" key="CommitChangelistDialog2" timestamp="1587122522083">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="358" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583414475953" />
-    <state x="448" y="9" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587047101446" />
+    <state x="448" y="9" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587122522083" />
     <state x="266" y="265" key="FileChooserDialogImpl" timestamp="1587047360775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="266" y="265" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587047360775" />
-    <state width="916" height="278" key="GridCell.Tab.0.bottom" timestamp="1587122165202">
+    <state width="916" height="278" key="GridCell.Tab.0.bottom" timestamp="1587476910081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="723" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
-    <state width="916" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587122165202" />
-    <state width="916" height="278" key="GridCell.Tab.0.center" timestamp="1587122165202">
+    <state width="916" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587476910081" />
+    <state width="916" height="278" key="GridCell.Tab.0.center" timestamp="1587476910081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="723" height="194" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
-    <state width="916" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587122165202" />
-    <state width="916" height="278" key="GridCell.Tab.0.left" timestamp="1587122165201">
+    <state width="916" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587476910081" />
+    <state width="916" height="278" key="GridCell.Tab.0.left" timestamp="1587476910081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="723" height="194" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
-    <state width="916" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587122165201" />
-    <state width="916" height="278" key="GridCell.Tab.0.right" timestamp="1587122165202">
+    <state width="916" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587476910081" />
+    <state width="916" height="278" key="GridCell.Tab.0.right" timestamp="1587476910081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="723" height="194" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583932776623" />
-    <state width="916" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587122165202" />
+    <state width="916" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587476910081" />
     <state width="918" height="350" key="GridCell.Tab.1.bottom" timestamp="1587050995094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -268,11 +285,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="237" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583335315606" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1587036533700">
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1587122536457">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583414487481" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587036533700" />
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587122536457" />
     <state x="566" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1587119270512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
